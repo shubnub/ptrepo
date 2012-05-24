@@ -64,14 +64,15 @@ function prompt_command {
     TERMWIDTH=${COLUMNS}
 
     #   Add all the accessories below ...
-    local temp="--(${usernam}@${hostnam}:${cur_tty})---(${PWD})--"
+#    local temp="--(${usernam}@${hostnam}:${cur_tty})---(${PWD})--"
+    local temp="--(${usernam}@${hostnam}:${PWD})-----"
 
     let fillsize=${TERMWIDTH}-${#temp}
     if [ "$fillsize" -gt "0" ]
     then
         fill="-------------------------------------------------------------------------------------------------------------------------------------------"
-        #   It's theoretically possible someone could need more 
-        #   dashes than above, but very unlikely!  HOWTO users, 
+        #   It's theoretically possible someone could need more
+        #   dashes than above, but very unlikely!  HOWTO users,
         #   the above should be ONE LINE, it may not cut and
         #   paste properly
         fill="${fill:0:${fillsize}}"
@@ -102,18 +103,9 @@ case $TERM in
         TITLEBAR=""
         ;;
 esac
-    
+
 PS1="$TITLEBAR\
-$YELLOW-$LIGHT_BLUE-(\
-$YELLOW\$usernam$LIGHT_BLUE@$YELLOW\$hostnam$LIGHT_BLUE:$WHITE\$cur_tty\
-${LIGHT_BLUE})-${YELLOW}-\${fill}${LIGHT_BLUE}-(\
-$YELLOW\${newPWD}\
-$LIGHT_BLUE)-$YELLOW-\
-\n\
-$YELLOW-$LIGHT_BLUE-(\
-$YELLOW\$(date +%H%M)$LIGHT_BLUE:$YELLOW\$(date \"+%a,%d %b %y\")\
-$LIGHT_BLUE:$WHITE\$$LIGHT_BLUE)-\
-$YELLOW-\
-$NO_COLOUR " 
-    
+$YELLOW-$LIGHT_BLUE-($YELLOW\$usernam$LIGHT_BLUE@$YELLOW\$hostnam$LIGHT_BLUE:$WHITE\${newPWD}${LIGHT_BLUE})-${YELLOW}-\${fill}-$LIGHT_BLUE-$YELLOW-\n\
+$YELLOW-$LIGHT_BLUE-($YELLOW\$(date \"+%b %d\")$LIGHT_BLUE:$YELLOW\$(date \"+%H:%M:%S\")$LIGHT_BLUE:$WHITE\$$LIGHT_BLUE)-$YELLOW-$NO_COLOUR "
+
 PS2="$LIGHT_BLUE-$YELLOW-$YELLOW-$NO_COLOUR "
