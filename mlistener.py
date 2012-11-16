@@ -59,7 +59,7 @@ sock.setsockopt(socket.IPPROTO_IP, socket.IP_ADD_MEMBERSHIP, mreq)
 try:
     while True:
 #        print sock.recv(10240)
-        data, address = sock.recvfrom(1024)
-        print "%s:%s (%s): %s" % (address[0], address[1], len(data), data)
+        data, address = sock.recvfrom(8196)
+        print "%s:%s (%s): %s" % (address[0], address[1], len(data), data.rstrip() )
 except KeyboardInterrupt:
     pass
