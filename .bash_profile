@@ -20,7 +20,7 @@ esac
 #export PS2='> '
 #export PS4='+ '
 
-alias ls='ls -FA'
+alias ls='ls -FAG'
 alias s=sudo
 
 # set up tab completion for ssh hosts
