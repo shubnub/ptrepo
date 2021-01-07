@@ -1,9 +1,13 @@
 #. /sw/bin/init.sh
-export PATH=/opt/local/bin:$HOME/work-bin:$HOME/bin:/usr/local/bin:$PATH
 #export MANPATH=/opt/local/man:$MANPATH
 #export VISUAL=gvim
 export EDITOR=vim
 export LSCOLORS="Cxfxcxdxbxegedabagacad"
+export HISTTIMEFORMAT="%Y-%m-%d %T "
+#export REQUESTS_CA_BUNDLE=/Users/pete/ca.crt
+
+stty werase undef
+bind '"\C-w": unix-filename-rubout'
 
 case $TERM in
    xterm*)
@@ -22,6 +26,10 @@ esac
 
 alias ls='ls -FAG'
 alias s=sudo
+alias tl='tmux list-sessions'
+alias tn='tmux new -s'
+alias tnd='tmux new -d -s'
+alias tks='tmux kill-session -t'
 
 # set up tab completion for ssh hosts
 _complete_ssh_hosts ()
@@ -43,15 +51,6 @@ _complete_ssh_hosts ()
 }
 complete -F _complete_ssh_hosts ssh
 
-##
-# Your previous /Users/pete/.bash_profile file was backed up as /Users/pete/.bash_profile.macports-saved_2011-07-26_at_00:51:59
-##
-
-# MacPorts Installer addition on 2011-07-26_at_00:51:59: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-# Finished adapting your PATH environment variable for use with MacPorts.
-
-hostnam=$(hostname -s)
 usernam=$(whoami)
 temp="$(tty)"
 #   Chop off the first five chars of tty (ie /dev/):
@@ -109,3 +108,12 @@ $YELLOW-$LIGHT_BLUE-($YELLOW\$usernam$LIGHT_BLUE@$YELLOW\$hostnam$LIGHT_BLUE:$WH
 $YELLOW-$LIGHT_BLUE-($YELLOW\$(date \"+%b %d\")$LIGHT_BLUE:$YELLOW\$(date \"+%H:%M:%S\")$LIGHT_BLUE:$WHITE\$$LIGHT_BLUE)-$YELLOW-$NO_COLOUR "
 
 PS2="$LIGHT_BLUE-$YELLOW-$YELLOW-$NO_COLOUR "
+
+if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
+    . /opt/local/etc/profile.d/bash_completion.sh
+fi
+
+export PATH=/opt/local/bin:/opt/local/sbin:$HOME/work-bin:$HOME/bin:/usr/local/bin:$PATH:/opt/local/lib/postgresql96/bin:$HOME/Library/Python/2.7/bin
+
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"

@@ -311,11 +311,13 @@ Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 "Plug 'chase/vim-ansible-yaml'
-Plug 'pearofducks/ansible-vim', { 'do': 'cd ./UltiSnips; python2 generate.py' }
+"Plug 'pearofducks/ansible-vim', { 'do': 'cd ./UltiSnips; python2 generate.py' }
+Plug 'pearofducks/ansible-vim', { 'do': './UltiSnips/generate.sh' }
 Plug 'godlygeek/tabular'
 Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'tmux-plugins/vim-tmux'
 Plug 'wellle/tmux-complete.vim'
+Plug 'ervandew/supertab'
 Plug 'davidhalter/jedi-vim'
 "Plug 'vim-scripts/VimOutliner'
 Plug 'ciaranm/inkpot'
