@@ -58,7 +58,7 @@ source $ZSH/oh-my-zsh.sh
 
 #export REQUESTS_CA_BUNDLE=/Users/pete/arin-int-ca.crt
 
-export MANPATH=/Applications/Wireshark.app/Contents/Resources/share/man:/Library/Developer/CommandLineTools/usr/share/man:/opt/local/man:/opt/local/share/man:/usr/local/share/man:/usr/share/man:/Users/pete/man
+export MANPATH=/Applications/Wireshark.app/Contents/Resources/share/man:/Library/Developer/CommandLineTools/usr/share/man:/opt/local/share/man:/usr/local/share/man:/usr/share/man:/Users/pete/man
 
 alias tl='tmux list-sessions'
 alias tn='tmux new -s'
@@ -71,7 +71,7 @@ export TMUXIFIER_LAYOUT_PATH="$HOME/.tmuxifier-layouts"
 export HISTTIMEFORMAT="%Y-%m-%d %T "
 export LANG=en_US.UTF-8
 
-source ~/.bin/tmuxinator.zsh
+#source ~/.bin/tmuxinator.zsh
 source ~/.iterm2_shell_integration.zsh
 
 eval "$(tmuxifier init -)"

@@ -56,3 +56,7 @@
 	conflictstyle = diff3
 [pull]
 	rebase = true
+[lfs "https://bitbucket.arin.net/wp/staticsite.git/info/lfs"]
+	locksverify = true
+[http "https://bitbucket2.arin.net/"]
+	sslcainfo = /Users/pete/arin-int-ca.crt
