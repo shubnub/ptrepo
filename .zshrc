@@ -37,7 +37,6 @@ export ZSH_TMUX_FIXTERM=true
 plugins=(
     git
     tmux
-    tmuxinator
     colored-man-pages
     colorize
     jira
@@ -60,11 +59,20 @@ source $ZSH/oh-my-zsh.sh
 
 export MANPATH=/Applications/Wireshark.app/Contents/Resources/share/man:/Library/Developer/CommandLineTools/usr/share/man:/opt/local/share/man:/usr/local/share/man:/usr/share/man:/Users/pete/man
 
-alias tl='tmux list-sessions'
-alias tn='tmux new -s'
+# The following three are provided by the tmux plugin.
+#alias tl='tmux list-sessions'
+#alias tn='tmux new -s'
+#alias tks='tmux kill-session -t'
 alias tnd='tmux new -d -s'
-alias tks='tmux kill-session -t'
 alias tm='tmuxifier'
+alias tml='tmuxifier list'
+alias tmw='tmuxifier load-window'
+alias tmew='tmuxifier edit-window'
+alias tmnw='tmuxifier new-window'
+alias tmls='tmuxifier list-sessions'
+alias tms='tmuxifier load-session'
+alias tmes='tmuxifier edit-session'
+alias tmns='tmuxifier new-session'
 export EDITOR=vim
 export TMUXIFIER="$HOME/git/tmuxifier"
 export TMUXIFIER_LAYOUT_PATH="$HOME/.tmuxifier-layouts"
