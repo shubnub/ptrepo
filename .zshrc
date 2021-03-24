@@ -25,7 +25,7 @@ export ZSH_THEME="agnoster"
 # DISABLE_COMPLETION_WAITING_DOTS="true"
 
 # Customize to your needs...
-export PATH=/Users/pete/bin:/Users/pete/work-bin:/opt/homebrew/bin:/opt/local/bin:/opt/local/sbin:/opt/X11/bin:/usr/local/bin:/usr/local/MacGPG2/bin:/usr/bin:/usr/sbin:/bin:/sbin:/opt/local/lib/postgresql96/bin:$HOME/Library/Python/2.7/bin
+export PATH=/Users/pete/bin:/Users/pete/work-bin:/opt/brew/bin:/opt/local/bin:/opt/brew/sbin:/opt/local/sbin:/opt/X11/bin:/usr/local/bin:/usr/local/MacGPG2/bin:/usr/bin:/usr/sbin:/bin:/sbin:/opt/local/lib/postgresql96/bin:$HOME/Library/Python/2.7/bin
 
 #export ZSH_TMUX_AUTOSTART=false
 export ZSH_TMUX_AUTOSTART=true
@@ -57,7 +57,7 @@ source $ZSH/oh-my-zsh.sh
 
 #export REQUESTS_CA_BUNDLE=/Users/pete/arin-int-ca.crt
 
-export MANPATH=/Applications/Wireshark.app/Contents/Resources/share/man:/Library/Developer/CommandLineTools/usr/share/man:/opt/homebrew/manpages:/opt/local/share/man:/usr/local/share/man:/usr/share/man:/Users/pete/man
+export MANPATH=/Applications/Wireshark.app/Contents/Resources/share/man:/Library/Developer/CommandLineTools/usr/share/man:/opt/brew/manpages:/opt/local/share/man:/usr/local/share/man:/usr/share/man:/Users/pete/man
 
 # The following three are provided by the tmux plugin.
 #alias tl='tmux list-sessions'
