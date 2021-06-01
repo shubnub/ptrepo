@@ -81,6 +81,7 @@ export LANG=en_US.UTF-8
 
 #source ~/.bin/tmuxinator.zsh
 source ~/.iterm2_shell_integration.zsh
+source ~/git/zsh-hist/zsh-hist.plugin.zsh # https://github.com/marlonrichert/zsh-hist
 
 eval "$(tmuxifier init -)"
 
