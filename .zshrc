@@ -41,7 +41,6 @@ plugins=(
     colorize
     jira
     themes
-    zsh_reload
     docker
 )
 # Info on some of the above plugins
@@ -49,7 +48,6 @@ plugins=(
 # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git
 # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/jira
 # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/themes
-# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/zsh_reload
 # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/docker
 #
 
